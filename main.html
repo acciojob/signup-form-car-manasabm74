@@ -8,23 +8,35 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<input  placeholder="Manasa" type="text" required="Yes"><br>
-	<input placeholder="manasabm47@gmail.com" type="email" required><br>
-	<input type="radio"  required>
-	<span>gender_m</span><br>
-	<input type="radio"  required>
-	<span>gender_f</span><br><br>
-	<select placeholder="--please select the option" required>
+	<form action="/sumbit" method="post">
+		<label for="name">Name:</label>
+	<input  type="text"  id="name"  placeholder="Name" required><br>
+		<label for="email">Email:</label>
+	<input  type="email" id="email" placeholder="Email"required><br>
+		<label>Gender</label>
+	<input type="radio"  id="gender_m" name="gender" required>
+	<label for "gender_m">Male</label><br>
+	<input type="radio" id="gender_f" name="gender" required>
+	<label for "gender_f">Female</label><br>
+	<label for=cars> Car Brands:</label>
+		<select id="cars"  name="cars" required>
+			<option value="" disabled selected>--please choose an option--</option>
 		<option > BMW</option>
 		<option>Audi</option>
 		<option>Benz</option>
 	</select><br>
-	<input placeholder="age" type="age" required><br>
-	<input  type="date" required><br>
-	<input  placeholder="8088818463"type="Numbers" required><br>
-	<input  placeholder="manuC#47"type="password" required><br>
-	<input type="checkbox" required><br>
-	<input type="submit">
+		<label for="age" >Age:</label>
+	<input type="age" id="age"  placeholder="age" required><br>
+	<label for="dob">DOB:</label>
+		<input  type="date"  id="dob"required><br>
+		<label for="tel">Phone number:</label>
+	<input  type="tel" id="tel" pattern="\d{3}-\d{3}-\d{4}" placeholder="808-881-8463"required><br>
+		<label for="password">Password:</label>
+	<input  type="password"  id="password" placeholder="password"required> <br>
+	<input type="checkbox" id="tos" required><br>
+		<label for="tos">I agrre to the TOS</label><br>
+	<button type="submit">Submitt</button>
+	</form>
     <script type="text/javascript" src="./script.js">
 </script>
 
